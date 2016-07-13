@@ -6,8 +6,8 @@ PIP_SELFCHECK=$(VENV)/pip-selfcheck.json
 garoon: $(PIP_SELFCHECK) $(PYTHON)
 	$(PYTHON) garoon.py -u $(u)
 
-schedule: $(PIP_SELFCHECK) $(PYTHON)
-	$(PYTHON) schedule -u $(u)
+remind: $(PIP_SELFCHECK) $(PYTHON)
+	$(PYTHON) remind.py -u $(u)
 
 $(PIP_SELFCHECK): $(PYTHON)
 	$(PIP) install -r requirements.txt
